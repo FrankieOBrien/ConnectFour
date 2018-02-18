@@ -249,27 +249,7 @@ public class ConnectFourGame {
 					}
 
 			}
-		// Checks Down/Right win
-		for (int row = 0; row < size; row++)
-			for (int col = 0; col < size; col++) {
-				if (row <= size - 4 && col <= size - 4)
-					if ((board[row][col] == person) && (board[row + 1][col + 1] == person)
-							&& (board[row + 2][col + 2] == person) && (board[row + 3][col + 3] == person)) {
-						winner = true;
-						return true;
-					}
 
-			}
-		// Checks Down/Left win
-		for (int row = 0; row < size; row++)
-			for (int col = 0; col < size; col++) {
-				if (row <= size - 4 && col >= 3)
-					if ((board[row][col] == person) && (board[row + 1][col - 1] == person)
-							&& (board[row + 2][col - 2] == person) && (board[row + 3][col - 3] == person)) {
-						winner = true;
-						return true;
-					}
-			}
 		return false;
 	}
 
